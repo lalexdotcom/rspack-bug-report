@@ -1,0 +1,26 @@
+{
+  "name": "rspack-optional-dep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "rspack build && node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lalexdotcom/rspack-optional-dep.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lalexdotcom/rspack-optional-dep/issues"
+  },
+  "homepage": "https://github.com/lalexdotcom/rspack-optional-dep#readme",
+  "dependencies": {
+    "fastify": "^4.15.0"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^0.1.2",
+    "@types/node": "^18.15.7"
+  }
+}
