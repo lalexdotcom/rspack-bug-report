@@ -1,15 +1,7 @@
 const path = require('path');
 
-const DisplayStatsPlugin = (compiler) => {
-    compiler.hooks.done.tap("DisplayStatsPlugin", stats => {
-        const statsJSON = stats.toJson();
-        for (const chunk of statsJSON.chunks) {
-            for (const module of chunk.modules) {
-                console.log(module.id, module.reasons?.length)
-            }
-        }
-    })
-}
+const DisplayStatsPlugin = require("./stats-plugin")
+
 
 module.exports = {
     entry: './index.js',
@@ -18,6 +10,9 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
+    },
+    stats: {
+        reasons: true,
     },
     plugins: [DisplayStatsPlugin]
 };
